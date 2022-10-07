@@ -5,14 +5,7 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-body {
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 25fr;
-  grid-template-rows: 80px 1fr 80px;
-  grid-template-areas: "aside header" "aside main" "aside footer";
-  height: 100vh;
-}
+
 
 /* html,
 body,
