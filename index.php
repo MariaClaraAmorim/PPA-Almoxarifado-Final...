@@ -9,18 +9,14 @@ $obRouter = new Router(URL);
 
 
 //INCLUI AS ROTAS DA API
-include __DIR__ . '/routes/Api/api.php';
+// include __DIR__ . '/routes/Api/api.php';
 
 //INCLUI AS ROTAS DAS PÁGINAS DE ADMIN
-include __DIR__ . '/routes/Admin/admin.php';
+include __DIR__ . '/routes/Admin.php';
 
-//INCLUI AS ROTAS DAS PÁGINAS DE PROFESSOR
-include __DIR__ . '/routes/Teacher/teacher.php';
-
-//INCLUI AS ROTAS DAS PÁGINAS DE ALUNO
-include __DIR__ . '/routes/Student/student.php';
-
+//INCLUI AS ROTAS DAS PÁGINAS DE ADMIN
+include __DIR__.'/routes/Usuario.php';
 
 // IMPRIME O RESPONSE DA ROTA
 $obRouter->run()
-         ->sendResponse();
+    ->sendResponse();
