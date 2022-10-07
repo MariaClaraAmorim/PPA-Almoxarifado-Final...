@@ -1,7 +1,5 @@
 <?php
 
-// use App\Controller\Pages\Public;
-
 use App\Controller\Pages\Login;
 
 use App\Http\Response;
