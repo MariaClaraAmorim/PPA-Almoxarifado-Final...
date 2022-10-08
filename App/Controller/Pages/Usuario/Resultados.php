@@ -12,10 +12,11 @@ class Resultados extends Page
      */
     public static function getResultados($request)
     {
-        $user = $request->user;
-
+        // $user = $request->user;
+        $user = "Maria Clara";
+        
         $content = View::render('/pages/Usuario/resultados', []);
-
-        return parent::getPage('Resultados', $content, $user);
-    }
+     
+        return parent::getPage('Resultados', $content, true, $user);
+      }
 }

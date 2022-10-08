@@ -6,50 +6,42 @@ use App\Utils\View;
 
 class Page
 {
-
-  // public static function getPage($title, $content, $user)
-  // {
-  //   return View::render('pages/Page', [
-  //     'title'   => $title,
-  //     'header'  => self::getHeader($user),
-  //     'content' => $content,
-  //     'footer'  => self::getFooter()
-  //   ]);
-  // }
-
-
-  // private static function getHeader($user)
-  // {
-  //   return View::render('template/header', []);
-  // }
-
-  // private static function getFooter()
-  // {
-  //   return View::render('template/footer', [
-  //     'data' => '2022'
-  //   ]);
-  // }
-
-
-  private static function getHeader()
+  /**
+   * Método responsável por retornar o conteúdo (view) da nossa página genérica
+   * @param string $title
+   * @param string $content
+   * @return  string  
+   */
+  public static function getPage($title, $content, $template = null, $user)
   {
-    return View::render('template/header', []);
-  }
+    if ($template === true) {
+      $header = self::getHeader($user);
+      $footer = self::getFooter();
+      
+    } else {
+      $header = '';
+      $footer = '';
+    }
 
-  private static function getFooter()
-  {
-    return View::render('template/footer', [
-      'data' => '2022'
+    return View::render('pages/Page', [
+      'title' => $title,
+      'header' => $header,
+      'content' => $content,
+      'footer' => $footer,
     ]);
   }
 
-  public static function getPage($title, $content)
+  private static function getHeader($usuario)
   {
-    return View::render('pages/Page', [
-      'title'   => $title,
-      'header'  => self::getHeader(),
-      'content' => $content,
-      'footer'  => self::getFooter()
+    return View::render('templates/header', [
+      'usuario' => $usuario
+    ]);
+  }
+  
+  private static function getFooter()
+  {
+    return View::render('templates/footer', [
+      'data' => date('Y')
     ]);
   }
 }
