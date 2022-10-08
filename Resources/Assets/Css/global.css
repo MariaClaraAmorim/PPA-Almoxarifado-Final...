@@ -5,8 +5,6 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
-
-
 /* html,
 body,
 #root {
@@ -30,60 +28,4 @@ a {
   text-decoration: none;
   list-style: none;
   color: white;
-}
-
-.header {
-  display: flex;
-  width: 100vw;
-  grid-area: header;
-  justify-content: space-between;
-  padding-inline-start: 5%;
-  padding-inline-end: 5%;
-  align-items: center;
-  gap: 0.3rem;
-  background-color: rgb(243 232 243 / 80%);
-}
-
-.details {
-  display: flex;
-}
-
-.details p {
-  margin-right: 3px;
-  transform: translateY(15%);
-}
-
-.imgHeader {
-  width: 7rem;
-  height: 7rem;
-}
-
-@media screen and (max-width: 400px) {
-  .imgHeader {
-    width: 5rem;
-    height: 5rem;
-  }
-}
-
-.iconUser {
-  font-size: 1.4rem;
-  margin-right: 10px;
-  transform: translateY(15%);
-}
-
-.iconCar {
-  transition: 0.3s;
-  margin-left: 15px;
-  font-size: 1.8rem;
-}
-
-.iconCar:hover {
-  fill: #38aecc;
-}
-
-.footer {
-  grid-area: footer;
-  background-color: rgb(243 232 243 / 80%);
-  text-align: center;
-  width: 100vw;
 }

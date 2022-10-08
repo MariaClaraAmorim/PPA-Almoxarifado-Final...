@@ -1,11 +1,74 @@
+body {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 25fr;
+  grid-template-rows: 80px 1fr 80px;
+  grid-template-areas: "aside header" "aside main" "aside footer";
+  height: 100vh;
+}
+
 .main{
-
+  grid-area: main;
 }
 
-.footer{
-
+.header {
+  display: flex;
+  width: 100vw;
+  grid-area: header;
+  justify-content: space-between;
+  padding-inline-start: 5%;
+  padding-inline-end: 5%;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: rgb(243 232 243 / 80%);
 }
 
-.header{
+.details {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
 
+.details p {
+  margin-right: 3px;
+  transform: translateY(15%);
+}
+
+.imgHeader {
+  width: 7rem;
+  height: 7rem;
+}
+
+@media screen and (max-width: 400px) {
+  .imgHeader {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.iconUser {
+  width: 1rem;
+  height: 1rem;
+}
+
+.iconCar {
+  width: 2.8rem;
+  height: 1.6rem;
+}
+
+.iconCar:hover {
+  fill: #38aecc;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(243 232 243 / 80%);
+  text-align: center;
+  width: 100vw;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
