@@ -1,91 +1,130 @@
-<!-- 
-<table>
-    <caption>Statement Summary</caption>
-    <thead>
-      <tr>
-        <th scope="col">Produto</th>
-        <th scope="col">Quantidade</th>
-        <th scope="col">Amount</th>
-        <th scope="col">Period</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-label="Account">Visa - 3412</td>
-        <td data-label="Due Date">04/01/2016</td>
-        <td data-label="Amount">$1,190</td>
-        <td data-label="Period">03/01/2016 - 03/31/2016</td>
-      </tr>
-      <tr>
-        <td scope="row" data-label="Account">Visa - 6076</td>
-        <td data-label="Due Date">03/01/2016</td>
-        <td data-label="Amount">$2,443</td>
-        <td data-label="Period">02/01/2016 - 02/29/2016</td>
-      </tr>
-      <tr>
-        <td scope="row" data-label="Account">Corporate AMEX</td>
-        <td data-label="Due Date">03/01/2016</td>
-        <td data-label="Amount">$1,181</td>
-        <td data-label="Period">02/01/2016 - 02/29/2016</td>
-      </tr>
-      <tr>
-        <td scope="row" data-label="Acount">Visa - 3412</td>
-        <td data-label="Due Date">02/01/2016</td>
-        <td data-label="Amount">$842</td>
-        <td data-label="Period">01/01/2016 - 01/31/2016</td>
-      </tr>
-    </tbody>
-  </table> -->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Resources/Assets/Css/Usuario/home.css" />
+    <link
+      rel="stylesheet"
+      href="/Resources/Assets/Css/Usuario/resultados.css"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <table>
+          <caption>
+            Resultados
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Produto</th>
+              <th scope="col">Quantidade</th>
+              <th scope="col">Status</th>
+              <th scope="col">Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tr">
+              <td data-label="Produto">Bicicleta Caloi</td>
+              <td data-label="Quantidade">10</td>
+              <td data-label="Status" class="status">
+                <div class="radius" id="statusRed"></div>
+              </td>
+              <td data-label="Ação">
+                <button class="btnActions" id="myBtn">Detalhes</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Detalhes</p>
+            <div>
+              <p className="titleModal">Retornar aqui o nome do produto</p>
+            </div>
 
-
-<table>
-    <caption>
-        Tabela responsiva
-      </caption>
-      <thead class="thead">
-        <tr class="tr">
-          <th scope="col">Produto</th>
-          <th scope="col">Quantidade</th>
-          <th scope="col">Status</th>
-          <th scope="col">Ação</th>
-        </tr>
-      </thead>
-      
-      <div class="content">
-        <tbody class="tbody">
-          <tr class="tr">
-            <td data-label="Produto">Bicicleta Caloi</td>
-            <td data-label="Quantidade">10</td>
-            <td data-label="Status" class="status">
-              <div class="radius" id="statusRed"></div>
-            </td>
-            <td data-label="Ação">
-              <button class="btn" onClick="{onOpen">Detalhes</button>
-            </td>
-          </tr>
-      
-          <tr class="tr">
-            <td data-label="Produto">Bicicleta Caloi</td>
-            <td data-label="Quantidade">10</td>
-            <td data-label="Status" class="status">
-              <div class="radius" id="statusRed"></div>
-            </td>
-            <td data-label="Ação">
-              <button class="btn" onClick="{onOpen">Detalhes</button>
-            </td>
-          </tr>
-      
-          <tr class="tr">
-            <td data-label="Produto">Bicicleta Caloi</td>
-            <td data-label="Quantidade">10</td>
-            <td data-label="Status" class="status">
-              <div class="radius" id="statusRed"></div>
-            </td>
-            <td data-label="Ação">
-              <button class="btn">Detalhes</button>
-            </td>
-          </tr>
-        </tbody>
+            <div>
+              <p className="products">Caneta Bic (Caixa)</p>
+              <p className="products">Caneta Bic (unidade)</p>
+            </div>
+          </div>
+          
+          </div>
+        </div>
       </div>
-</table>
+    </main>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+    </script>
+    ]
+  </body>
+</html>
+
+<style>
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
