@@ -12,10 +12,11 @@ class Home extends Page
    */
   public static function getHome($request)
   {
-    $user = $request->user;
-
+    // $user = $request->user;
+    $user = "Maria Clara";
+    
     $content = View::render('/pages/Usuario/home', []);
-
-    return parent::getPage('Home', $content, $user);
+ 
+    return parent::getPage('Home', $content, true, $user);
   }
 }
