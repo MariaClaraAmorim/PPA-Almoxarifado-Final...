@@ -11,4 +11,4 @@ include __DIR__ . '/Usuario/resultados.php';
 
 include __DIR__ . '/Usuario/carrinho.php';
 
-// include __DIR__ . '/Usuario/requisicoes.php';
+include __DIR__ . '/Usuario/requisicoes.php';
