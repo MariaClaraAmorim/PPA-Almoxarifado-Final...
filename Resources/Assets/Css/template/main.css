@@ -18,8 +18,14 @@ body {
 
 .main {
   grid-area: main;
+  overflow-y: scroll;
 }
 
+
+.main::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
 .header {
   display: flex;
   width: 100vw;
