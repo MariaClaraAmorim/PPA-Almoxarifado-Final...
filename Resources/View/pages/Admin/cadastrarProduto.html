@@ -1,13 +1,331 @@
+<link
+  rel="stylesheet"
+  href="/Resources/Assets/Css/Admin/cadastrarProduto.css"
+  />
 
-<main>
-  <div><h1>Cadastrar produto</h1></div>
+<script src="/Resources/Assets/Js/quantity.js"></script>
+<main class="main">
 
-  <div>
-    <p>Quantidade</p>
-    <div class="counter">
-      <span class="down" onClick="decreaseCount(event, this)">-</span>
-      <input type="text" value="1" />
-      <span class="up" onClick="increaseCount(event, this)">+</span>
+  <section class="teste">
+    <h1 class="title">Cadastrar produto</h1>
+    <div class="box">
+      <input type="name" required />
+      <span> Nome do produto </span>
+      <i></i>
     </div>
-  </div>
+    <div class="grid">
+      <div>
+        <div>
+          <p>Decrição</p>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+          <p>Especificação</p>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+
+      <div class="check">
+
+        <div>
+          <p>Categoria</p>
+          <div class="custom-checkbox">
+            <input type="radio" id="radio_1" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_1">Categoria 1</label>
+          </div>
+
+          <div class="custom-checkbox">
+            <input type="radio" id="radio_2" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_2">Categoria 2</label>
+
+          </div> <div class="custom-checkbox">
+            <input type="radio" id="radio_3" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_3">Categoria 3</label>
+          </div>
+          <div class="custom-checkbox">
+            <input type="radio" id="radio_4" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_4">Categoria 4</label>
+          </div>
+          <div class="custom-checkbox">
+            <input type="radio" id="radio_5" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_5">Categoria 5</label>
+          </div>
+
+        </div>
+
+        <div>
+          <div>
+            <p>Tipo de produto</p>
+            <div class="custom-checkbox">
+              <input type="radio" id="radio_10" name="avaliacao"
+                id="avaliacao_checkbox" value="10">
+              <label for="radio_10">Unitario</label>
+            </div>
+            <div class="custom-checkbox">
+              <input type="radio" id="radio_11" name="avaliacao"
+                id="avaliacao_checkbox" value="10">
+              <label for="radio_11">Atacado</label>
+            </div>
+          </div>
+  
+          <div>
+            <p>Quantidade</p>
+            <div class="counter">
+              <span class="down" onClick="decreaseCount(event, this)">-</span>
+              <input type="text" value="1" />
+              <span class="up" onClick="increaseCount(event, this)">+</span>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p>Nota Fiscal</p>
+          <div class="drop_box">
+           
+            <input type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style="display:none;">
+            <button class="btn">Anexar NF</button>
+          </div>
+            </div>
+        </div>
+
+      </div>
+    </div> 
+  </section>
 </main>
+
+<!-- <script>
+    const dropArea = document.querySelector(".drop_box"),
+  button = dropArea.querySelector("button"),
+  dragText = dropArea.querySelector("header"),
+  input = dropArea.querySelector("input");
+  let file;
+  var filename;
+
+  button.onclick = () => {
+    input.click();
+  };
+
+  input.addEventListener("change", function (e) {
+    var fileName = e.target.files[0].name;
+    let filedata = `<form>
+      <h4>${fileName}</h4>
+      <button class="btn">Upload</button>
+
+      </form>`;
+    dropArea.innerHTML = filedata;
+});
+
+  </script> -->
+
+
+
+<!-- <div class="action">
+            <a href="/Admin/Home">
+              <button class="btn">
+                Voltar
+              </button>
+            </a>
+            <button class="btn">
+              Cadastrar
+            </button>
+          </div> -->
+<!-- <div class="container">
+
+    <h1>Cadastrar produto</h1>
+
+    <div class="box">
+      <input type="name" required />
+      <span> Nome do produto </span>
+      <i></i>
+    </div>
+
+    <div class="content">
+      <div>
+        <div>
+          <p>Descrição</p>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+          <p>Especificação</p>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+
+      <div class="opa">
+
+        <div>
+          <p>Categoria</p>
+          <div class="custom-checkbox">
+            <input type="radio" id="radio_1" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_1">Categoria 1</label>
+          </div>
+
+          <div class="custom-checkbox">
+            <input type="radio" id="radio_2" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_2">Categoria 2</label>
+
+          </div> <div class="custom-checkbox">
+            <input type="radio" id="radio_3" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_3">Categoria 3</label>
+          </div>
+          <div class="custom-checkbox">
+            <input type="radio" id="radio_4" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_4">Categoria 4</label>
+          </div>
+          <div class="custom-checkbox">
+            <input type="radio" id="radio_5" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_5">Categoria 5</label>
+          </div>
+
+        </div>
+
+        <div>
+          <p>Tipo de produto</p>
+          <div class="custom-checkbox">
+            <input type="radio" id="radio_10" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_10">Unitario</label>
+          </div>
+          <div class="custom-checkbox">
+            <input type="radio" id="radio_11" name="avaliacao"
+              id="avaliacao_checkbox" value="10">
+            <label for="radio_11">Atacado</label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="testeee">
+
+        <div>
+          <p>Quantidade</p>
+          <div class="counter">
+            <span class="down" onClick="decreaseCount(event, this)">-</span>
+            <input type="text" value="1" />
+            <span class="up" onClick="increaseCount(event, this)">+</span>
+          </div>
+
+          <div>
+            <p>Nota fiscal</p>
+            <div>a</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!-- 
+  .container {
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* CheckBox */
+.custom-checkbox {
+  font-size: 20px;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox input:checked + label:before {
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: #060552;
+  background-position: center;
+  border: none;
+  padding: 1px;
+}
+
+.custom-checkbox input + label:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid gray;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 3px;
+}
+/* Fim do CheckBox */
+
+/* Quantity */
+.counter {
+  width: 100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter input {
+  width: 25px;
+  border: 0;
+  line-height: 15px;
+  font-size: 15px;
+  text-align: center;
+  background: #060552;
+  color: #fff;
+  appearance: none;
+  outline: 0;
+}
+.counter span {
+  display: block;
+  font-size: 25px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #060552;
+  user-select: none;
+}
+/* Fim quantity */
+
+
+
+.testeee {
+  display: flex;
+}
+
+
+@media screen and (max-width:800px) {
+  .testeee{
+    flex-wrap: wrap;
+  }
+}
+
+.opa{
+  display: flex;
+}
+
+@media screen and (max-width:800px) {
+  .opa{
+    flex-wrap: wrap;
+  }
+}
+
+ -->
