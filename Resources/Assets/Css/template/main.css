@@ -5,11 +5,18 @@ body {
   grid-template-rows: 80px 1fr 80px;
   grid-template-areas: "aside header" "aside main" "aside footer";
   height: 100vh;
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(124,106,131,1) 37%, rgba(255,197,247,1) 100%, rgba(224,191,235,1) 100%, rgba(191,143,204,1) 150%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(124, 106, 131, 1) 37%,
+    rgba(255, 197, 247, 1) 100%,
+    rgba(224, 191, 235, 1) 100%,
+    rgba(191, 143, 204, 1) 150%
+  );
 }
 
-.main{
+.main {
   grid-area: main;
 }
 
@@ -29,6 +36,7 @@ body {
   display: flex;
   align-content: center;
   align-items: center;
+  gap: 0.2rem;
 }
 
 .details p {
@@ -64,14 +72,14 @@ body {
 
 .footer {
   grid-area: footer;
-  background: linear-gradient(0deg, rgba(0,0,0,0) 0%);
-color: #fff;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%);
+  color: #fff;
   /* background-color: rgb(243 232 243 / 80%); */
   text-align: center;
   width: 100vw;
 }
 
-.column{
+.column {
   display: flex;
   flex-direction: column;
   padding: 1rem;
