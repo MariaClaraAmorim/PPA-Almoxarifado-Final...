@@ -31,9 +31,7 @@
   padding-bottom: 2rem;
 }
 
-.teste {
-  line-height: 40px;
-}
+
 
 .imgLogin {
   width: 100%;
@@ -137,7 +135,7 @@
   }
 }
 
-.teste {
+.submit {
   text-align: center;
   color: #fff;
 }
