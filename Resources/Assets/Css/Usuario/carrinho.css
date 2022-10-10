@@ -140,3 +140,16 @@ table th {
   color: #060552;
   user-select: none;
 }
+
+
+/* POPUP de excluir */
+.modalDelete {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 50%;
+  border-radius: 5px;
+  width: 55%;
+  position: relative;
+  text-align: center;
+}
