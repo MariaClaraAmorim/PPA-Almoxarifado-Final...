@@ -1,18 +1,20 @@
 <?php
 
-// namespace App\Controller\Pages\Admin;
+namespace App\Controller\Pages\Admin;
 
-// use App\Utils\View;
+use App\Utils\View;
 
-// class Home extends Page
-// {
+class Home extends Page
+{
   
-//   public static function getHome()
-//   {
-//     $content = View::render('/pages/Admin/home',[
-//       'itens' => 'Admin'
-//     ]);
+  public static function getHomeAdmin()
+  {
 
-//     return parent::getPage('Home', $content);
-//   }
-// }
+    // $user = $request->user;
+    $user = "Admin";
+    $content = View::render('/pages/Admin/home',[
+    ]);
+
+    return parent::getPage('Home', $content, true, $user);
+  }
+}
