@@ -4,7 +4,7 @@
   justify-content: center;
   padding: 10rem 10%;
   gap: 3rem;
-  height: fit-content;
+  height: 100vh;
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 1) 22%,
@@ -152,6 +152,6 @@
 }
 
 .btn:hover {
-  background-color: #060552;
+  background-color: #27259a;
   color: white;
 }
