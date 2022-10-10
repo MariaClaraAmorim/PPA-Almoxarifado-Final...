@@ -33,6 +33,10 @@
     color: #060552;
     background: none;
   }
+
+  .searchinput::placeholder {
+    color:#060552;
+  }
   
   .searchbutton {
     text-align: center;
