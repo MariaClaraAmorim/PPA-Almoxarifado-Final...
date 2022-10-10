@@ -41,40 +41,26 @@
 
         <div id="myModal" class="modal">
           <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Detalhes</p>
-            <div>
+              <span class="close">&times;</span>
               <p className="titleModal">Retornar aqui o nome do produto</p>
-            </div>
+          <div class="content">
+              
+            <div class="detailsProduct">
+              <p className="products">Caneta Bic (Caixa)
+                <div class="counter">
+                  <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                  <input type="text" value="1">
+                  <span class="up" onClick='increaseCount(event, this)'>+</span>
+                </div>
+              </p>
 
-            <div>
-              <p className="products">Caneta Bic (Caixa)</p>
-              <p className="products">Caneta Bic (unidade)</p>
+              <div class="custom-checkbox">
+                <input type="radio" id="radio_1" name="avaliacao" id="avaliacao_checkbox" value="10">
+                <label for="radio_1"></label>
+              </div>
             </div>
+          </div>
 
-            <div class="custom-checkbox">
-              <input type="radio" id="radio_1" name="avaliacao" id="avaliacao_checkbox" value="10">
-              <label for="radio_1">1. <img class="iconesAvaliar" src="/Resources/Assets/Imagens/IconeOtimo.png"
-                  alt="Emoji de ótimo"> Ótimo</label>
-            </div>
-
-            <div class="custom-checkbox">
-              <input type="radio" id="radio_1" name="avaliacao" id="avaliacao_checkbox" value="10">
-              <label for="radio_1">1. <img class="iconesAvaliar" src="/Resources/Assets/Imagens/IconeOtimo.png"
-                  alt="Emoji de ótimo"> Ótimo</label>
-            </div>
-
-            <div class="custom-checkbox">
-              <input type="radio" id="radio_1" name="avaliacao" id="avaliacao_checkbox" value="10">
-              <label for="radio_1">1. <img class="iconesAvaliar" src="/Resources/Assets/Imagens/IconeOtimo.png"
-                  alt="Emoji de ótimo"> Ótimo</label>
-            </div>
-
-            <div class="counter">
-              <span class="down" onClick='decreaseCount(event, this)'>-</span>
-              <input type="text" value="1">
-              <span class="up" onClick='increaseCount(event, this)'>+</span>
-            </div>
           </div>
           
           </div>
@@ -139,17 +125,17 @@ function decreaseCount(a, b) {
 
 
 .counter {
-    width: 150px;
+    width: 100px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .counter input {
-    width: 50px;
+  width: 25px;
     border: 0;
-    line-height: 30px;
-    font-size: 20px;
+    line-height: 20px;
+    font-size: 15px;
     text-align: center;
     background: #0052cc;
     color: #fff;
