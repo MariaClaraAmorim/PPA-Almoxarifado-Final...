@@ -15,7 +15,3 @@ $obRouter->get('/estoque/editar', [
         return new Response(200, Estoque::getEstoqueEditar($request));
     }
 ]);
-
-
-
-
