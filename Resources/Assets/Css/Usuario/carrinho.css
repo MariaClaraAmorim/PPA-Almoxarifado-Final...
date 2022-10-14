@@ -141,7 +141,6 @@ table th {
   user-select: none;
 }
 
-
 /* POPUP de excluir */
 .modalDelete {
   margin: 70px auto;
@@ -152,4 +151,38 @@ table th {
   width: 55%;
   position: relative;
   text-align: center;
+}
+
+.titleClose {
+  display: flex;
+  justify-content: end;
+}
+
+.iconClose {
+  height: 20px;
+  /* cursor: pointer; */
+}
+
+.btnExcluir {
+  background: #fff;
+  color: #060552;
+  padding: 0.4rem;
+  border: 0.2rem solid #060552;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+.btnExcluir:hover {
+  background-color: #060552;
+  color: white;
+}
+
+.content {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.title {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
