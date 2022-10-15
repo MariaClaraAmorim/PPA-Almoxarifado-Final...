@@ -188,3 +188,10 @@
   vertical-align: middle;
   margin-right: 8px;
 }
+
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  color: red;
+  margin-bottom: 2rem;
+}
