@@ -100,4 +100,20 @@ class Login extends Page
     //REDIRECIONA O USUÁRIO PARA A TELA DE LOGIN
     $request->getRouter()->redirect('/');
   }
+
+
+
+  /**
+   * Método responsável por retornar a rederização da página de redefinir senha
+   * @param Request $request
+   * @return string
+   */
+  public static function getRedefinirSenha($request)
+  {
+    //CONTEÚDO DA PÁGINA DE LOGIN
+    return view::render('/pages/redefinirSenha', [
+      'usuario' => '',
+      'senha'   => ''
+    ]);
+  }
 }
