@@ -14,7 +14,7 @@ $obRouter = new Router(URL);
 //INCLUI AS ROTAS DAS PÁGINAS DE ADMIN
 include __DIR__ . '/routes/Admin.php';
 
-//INCLUI AS ROTAS DAS PÁGINAS DE ADMIN
+//INCLUI AS ROTAS DAS PÁGINAS DE USUARIO
 include __DIR__.'/routes/Usuario.php';
 
 //INCLUI A ROTA DA PÁGINA DE LOGIN
